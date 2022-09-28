@@ -57,7 +57,7 @@ while True:
 #export data as csv file
 file_list = [name_of_job,time,job_time,address,company,links]
 exported = zip_longest(*file_list)
-with open ("C:/Users/FAM/downloads/scrapwazzuf.csv", "a+", newline='', encoding='UTF8')as myfile:
+with open ("scrap-wazzuf.csv","w", newline='', encoding='UTF8')as myfile:
     wr = csv.writer(myfile)
     wr.writerow (["job name","posted time","job time","job address","company name","link"])
     wr.writerows(exported)
